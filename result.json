@@ -1,0 +1,1002 @@
+{
+  "organization": "pallets-eco",
+  "summary": {
+    "repositories": 38,
+    "analyzed": 35,
+    "failed": 0,
+    "unsupported": 3,
+    "findings": 92
+  },
+  "repositories": [
+    {
+      "name": ".github",
+      "url": "https://github.com/pallets-eco/.github.git",
+      "status": "unsupported",
+      "languages": [],
+      "findings": []
+    },
+    {
+      "name": "blinker",
+      "url": "https://github.com/pallets-eco/blinker.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "cachelib",
+      "url": "https://github.com/pallets-eco/cachelib.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "click-bash4.2-completion",
+      "url": "https://github.com/pallets-eco/click-bash4.2-completion.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "croniter",
+      "url": "https://github.com/pallets-eco/croniter.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-admin",
+      "url": "https://github.com/pallets-eco/flask-admin.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/auth/main.py",
+          "start_line": 193
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "examples/auth_flask_login/main.py",
+          "start_line": 184
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/auth_flask_login/main.py",
+          "start_line": 291
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/azure_blob_storage/main.py",
+          "start_line": 37
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/babel/main.py",
+          "start_line": 89
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "examples/bootstrap4/main.py",
+          "start_line": 54
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/bootstrap4/main.py",
+          "start_line": 223
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/csp_nonce/main.py",
+          "start_line": 39
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/custom_layout/main.py",
+          "start_line": 129
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/datetime_timezone/main.py",
+          "start_line": 131
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/forms_files_images/main.py",
+          "start_line": 258
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/geo_alchemy/main.py",
+          "start_line": 104
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/host_matching/main.py",
+          "start_line": 60
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/methodview/main.py",
+          "start_line": 44
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/mongoengine/main.py",
+          "start_line": 189
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/multiple_admin_instances/main.py",
+          "start_line": 35
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/peewee_simple/main.py",
+          "start_line": 155
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/pymongo_simple/main.py",
+          "start_line": 118
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/rediscli/main.py",
+          "start_line": 30
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/s3/main.py",
+          "start_line": 72
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/simple/main.py",
+          "start_line": 36
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/sqla_association_proxy/main.py",
+          "start_line": 120
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/sqla_custom_inline_forms/main.py",
+          "start_line": 184
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/actions.py",
+          "start_line": 138
+        },
+        {
+          "rule_id": "py/path-injection",
+          "severity": "warning",
+          "message": "This path depends on a [user-provided value](1).",
+          "file": "flask_admin/contrib/fileadmin/__init__.py",
+          "start_line": 151
+        },
+        {
+          "rule_id": "py/path-injection",
+          "severity": "warning",
+          "message": "This path depends on a [user-provided value](1).",
+          "file": "flask_admin/contrib/fileadmin/__init__.py",
+          "start_line": 175
+        },
+        {
+          "rule_id": "py/path-injection",
+          "severity": "warning",
+          "message": "This path depends on a [user-provided value](1).",
+          "file": "flask_admin/contrib/fileadmin/__init__.py",
+          "start_line": 182
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2352
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2375
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2378
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2404
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2408
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2414
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2432
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2461
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2465
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2471
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2494
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2505
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2518
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2522
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2577
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_admin/model/base.py",
+          "start_line": 2670
+        }
+      ]
+    },
+    {
+      "name": "flask-alembic",
+      "url": "https://github.com/pallets-eco/flask-alembic.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-api-examples",
+      "url": "https://github.com/pallets-eco/flask-api-examples.git",
+      "status": "unsupported",
+      "languages": [],
+      "findings": []
+    },
+    {
+      "name": "flask-caching",
+      "url": "https://github.com/pallets-eco/flask-caching.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/reflective-xss",
+          "severity": "warning",
+          "message": "Cross-site scripting vulnerability due to a [user-provided value](1).\nCross-site scripting vulnerability due to a [user-provided value](2).",
+          "file": "examples/hello.py",
+          "start_line": 46
+        }
+      ]
+    },
+    {
+      "name": "flask-classful",
+      "url": "https://github.com/pallets-eco/flask-classful.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-debugtoolbar",
+      "url": "https://github.com/pallets-eco/flask-debugtoolbar.git",
+      "status": "analyzed",
+      "languages": [
+        "javascript"
+      ],
+      "findings": [
+        {
+          "rule_id": "js/useless-regexp-character-escape",
+          "severity": "warning",
+          "message": "The escape sequence '\\?' is equivalent to just '?', so the sequence may still represent a meta-character when it is used in a [regular expression](1).",
+          "file": "src/flask_debugtoolbar/static/codemirror/mode/coffeescript/coffeescript.js",
+          "start_line": 12
+        },
+        {
+          "rule_id": "js/useless-regexp-character-escape",
+          "severity": "warning",
+          "message": "The escape sequence '\\-' is equivalent to just '-', so the sequence may still represent a meta-character when it is used in a [regular expression](1).",
+          "file": "src/flask_debugtoolbar/static/codemirror/mode/coffeescript/coffeescript.js",
+          "start_line": 14
+        },
+        {
+          "rule_id": "js/bad-tag-filter",
+          "severity": "warning",
+          "message": "This regular expression only parses --> and not --!> as a HTML comment end tag.",
+          "file": "src/flask_debugtoolbar/static/codemirror/mode/xml/xml.js",
+          "start_line": 28
+        },
+        {
+          "rule_id": "js/bad-tag-filter",
+          "severity": "warning",
+          "message": "This regular expression only parses --> and not --!> as a HTML comment end tag.",
+          "file": "src/flask_debugtoolbar/static/codemirror/mode/xmlpure/xmlpure.js",
+          "start_line": 114
+        },
+        {
+          "rule_id": "js/bad-tag-filter",
+          "severity": "warning",
+          "message": "This regular expression only parses --> and not --!> as a HTML comment end tag.",
+          "file": "src/flask_debugtoolbar/static/codemirror/mode/xmlpure/xmlpure.js",
+          "start_line": 279
+        },
+        {
+          "rule_id": "js/functionality-from-untrusted-source",
+          "severity": "warning",
+          "message": "Script loaded using unencrypted connection.",
+          "file": "src/flask_debugtoolbar/static/codemirror/mode/xquery/index.html",
+          "start_line": 30
+        },
+        {
+          "rule_id": "js/functionality-from-untrusted-source",
+          "severity": "warning",
+          "message": "Script loaded using unencrypted connection.\nScript loaded from content delivery network with no integrity check.",
+          "file": "src/flask_debugtoolbar/static/codemirror/mode/xquery/test/index.html",
+          "start_line": 6
+        },
+        {
+          "rule_id": "js/functionality-from-untrusted-source",
+          "severity": "warning",
+          "message": "Script loaded using unencrypted connection.\nScript loaded from content delivery network with no integrity check.",
+          "file": "src/flask_debugtoolbar/static/codemirror/mode/xquery/test/index.html",
+          "start_line": 7
+        },
+        {
+          "rule_id": "js/useless-regexp-character-escape",
+          "severity": "warning",
+          "message": "The escape sequence '\\.' is equivalent to just '.', so the sequence may still represent a meta-character when it is used in a [regular expression](1).",
+          "file": "src/flask_debugtoolbar/static/codemirror/util/foldcode.js",
+          "start_line": 6
+        },
+        {
+          "rule_id": "js/useless-regexp-character-escape",
+          "severity": "warning",
+          "message": "The escape sequence '\\-' is equivalent to just '-', so the sequence may still represent a meta-character when it is used in a [regular expression](1).",
+          "file": "src/flask_debugtoolbar/static/codemirror/util/foldcode.js",
+          "start_line": 6
+        },
+        {
+          "rule_id": "js/incorrect-suffix-check",
+          "severity": "warning",
+          "message": "This suffix check is missing a length comparison to correctly handle lastIndexOf returning -1.",
+          "file": "src/flask_debugtoolbar/static/codemirror/util/searchcursor.js",
+          "start_line": 54
+        },
+        {
+          "rule_id": "js/incorrect-suffix-check",
+          "severity": "warning",
+          "message": "This suffix check is missing a length comparison to correctly handle lastIndexOf returning -1.",
+          "file": "src/flask_debugtoolbar/static/codemirror/util/searchcursor.js",
+          "start_line": 65
+        },
+        {
+          "rule_id": "js/unsafe-html-expansion",
+          "severity": "warning",
+          "message": "This self-closing HTML tag expansion invalidates prior sanitization as [this regular expression](1) may match part of an attribute value.",
+          "file": "src/flask_debugtoolbar/static/js/jquery-migrate.js",
+          "start_line": 890
+        },
+        {
+          "rule_id": "js/unsafe-html-expansion",
+          "severity": "warning",
+          "message": "This self-closing HTML tag expansion invalidates prior sanitization as [this regular expression](1) may match part of an attribute value.",
+          "file": "src/flask_debugtoolbar/static/js/jquery-migrate.js",
+          "start_line": 907
+        },
+        {
+          "rule_id": "js/html-constructed-from-input",
+          "severity": "warning",
+          "message": "This HTML construction which depends on [library input](1) might later allow [cross-site scripting](2).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.js",
+          "start_line": 1279
+        },
+        {
+          "rule_id": "js/html-constructed-from-input",
+          "severity": "warning",
+          "message": "This HTML construction which depends on [library input](1) might later allow [cross-site scripting](2).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.js",
+          "start_line": 1280
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 472
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 563
+        },
+        {
+          "rule_id": "js/html-constructed-from-input",
+          "severity": "warning",
+          "message": "This HTML construction which depends on [library input](1) might later allow [cross-site scripting](2).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 588
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 828
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 966
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 1110
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 1560
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2029
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2076
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2143
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2189
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2395
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2419
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2447
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2471
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2477
+        },
+        {
+          "rule_id": "js/unsafe-jquery-plugin",
+          "severity": "warning",
+          "message": "Potential XSS vulnerability in the ['$.fn.tablesorter' plugin](1).",
+          "file": "src/flask_debugtoolbar/static/js/jquery.tablesorter.js",
+          "start_line": 2478
+        }
+      ]
+    },
+    {
+      "name": "flask-docs-translations",
+      "url": "https://github.com/pallets-eco/flask-docs-translations.git",
+      "status": "unsupported",
+      "languages": [],
+      "findings": []
+    },
+    {
+      "name": "flask-dramatiq",
+      "url": "https://github.com/pallets-eco/flask-dramatiq.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-environments",
+      "url": "https://github.com/pallets-eco/flask-environments.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-jsonschema",
+      "url": "https://github.com/pallets-eco/flask-jsonschema.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-jwt",
+      "url": "https://github.com/pallets-eco/flask-jwt.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-mail",
+      "url": "https://github.com/pallets-eco/flask-mail.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-negotiate",
+      "url": "https://github.com/pallets-eco/flask-negotiate.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-openid",
+      "url": "https://github.com/pallets-eco/flask-openid.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).\nUntrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_openid.py",
+          "start_line": 565
+        }
+      ]
+    },
+    {
+      "name": "flask-orjson",
+      "url": "https://github.com/pallets-eco/flask-orjson.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-principal",
+      "url": "https://github.com/pallets-eco/flask-principal.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-pydantic",
+      "url": "https://github.com/pallets-eco/flask-pydantic.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-rq",
+      "url": "https://github.com/pallets-eco/flask-rq.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-security",
+      "url": "https://github.com/pallets-eco/flask-security.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/weak-sensitive-data-hashing",
+          "severity": "warning",
+          "message": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](4) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](5) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](6) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](7) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](8) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](9) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](10) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](11) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+          "file": "flask_security/utils.py",
+          "start_line": 388
+        },
+        {
+          "rule_id": "py/weak-sensitive-data-hashing",
+          "severity": "warning",
+          "message": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA1) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA1) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA1) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](4) is used in a hashing algorithm (SHA1) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+          "file": "flask_security/utils.py",
+          "start_line": 1455
+        }
+      ]
+    },
+    {
+      "name": "flask-security-3.0",
+      "url": "https://github.com/pallets-eco/flask-security-3.0.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_security/decorators.py",
+          "start_line": 61
+        },
+        {
+          "rule_id": "py/weak-sensitive-data-hashing",
+          "severity": "warning",
+          "message": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](4) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](5) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](6) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](7) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](8) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](9) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](10) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](11) is used in a hashing algorithm (SHA512) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+          "file": "flask_security/utils.py",
+          "start_line": 128
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_security/views.py",
+          "start_line": 82
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_security/views.py",
+          "start_line": 98
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_security/views.py",
+          "start_line": 131
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_security/views.py",
+          "start_line": 184
+        }
+      ]
+    },
+    {
+      "name": "flask-session",
+      "url": "https://github.com/pallets-eco/flask-session.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/hello.py",
+          "start_line": 38
+        },
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/kitchen-sink.py",
+          "start_line": 63
+        }
+      ]
+    },
+    {
+      "name": "flask-social",
+      "url": "https://github.com/pallets-eco/flask-social.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_social/views.py",
+          "start_line": 93
+        },
+        {
+          "rule_id": "py/url-redirection",
+          "severity": "warning",
+          "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+          "file": "flask_social/views.py",
+          "start_line": 120
+        }
+      ]
+    },
+    {
+      "name": "flask-sqlalchemy",
+      "url": "https://github.com/pallets-eco/flask-sqlalchemy.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-sqlalchemy-lite",
+      "url": "https://github.com/pallets-eco/flask-sqlalchemy-lite.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-stache",
+      "url": "https://github.com/pallets-eco/flask-stache.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-ujson",
+      "url": "https://github.com/pallets-eco/flask-ujson.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "flask-wtf",
+      "url": "https://github.com/pallets-eco/flask-wtf.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "secure-cookie",
+      "url": "https://github.com/pallets-eco/secure-cookie.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "wtforms",
+      "url": "https://github.com/pallets-eco/wtforms.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/redos",
+          "severity": "warning",
+          "message": "This part of the regular expression may cause exponential backtracking on strings starting with '0-' and containing many repetitions of '--'.",
+          "file": "src/wtforms/validators.py",
+          "start_line": 839
+        }
+      ]
+    },
+    {
+      "name": "wtforms-appengine",
+      "url": "https://github.com/pallets-eco/wtforms-appengine.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "wtforms-dateutil",
+      "url": "https://github.com/pallets-eco/wtforms-dateutil.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "wtforms-django",
+      "url": "https://github.com/pallets-eco/wtforms-django.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": []
+    },
+    {
+      "name": "wtforms-sqlalchemy",
+      "url": "https://github.com/pallets-eco/wtforms-sqlalchemy.git",
+      "status": "analyzed",
+      "languages": [
+        "python"
+      ],
+      "findings": [
+        {
+          "rule_id": "py/flask-debug",
+          "severity": "warning",
+          "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+          "file": "examples/flask/basic.py",
+          "start_line": 46
+        }
+      ]
+    }
+  ]
+}

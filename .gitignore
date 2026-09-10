@@ -1,0 +1,6 @@
+.env
+.venv/
+tmp_miner/
+__pycache__/
+.pytest_cache/
+*.sarif
