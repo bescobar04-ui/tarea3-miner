@@ -15,9 +15,9 @@ El miner consulta la REST API de GitHub (manejando paginación y límites de tas
 
 2. Crear y activar el entorno virtual:
    python -m venv .venv
-# En Windows (PowerShell):
+ En Windows (PowerShell):
 .\.venv\Scripts\activate
-# En Linux/macOS:
+ En Linux/macOS:
 source .venv/bin/activate
 
 3. Instalar el paquete y sus dependencias:
