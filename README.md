@@ -18,7 +18,7 @@ El miner consulta la REST API de GitHub (manejando paginación y límites de tas
 # En Windows (PowerShell):
 .\.venv\Scripts\activate
 # En Linux/macOS:
-# source .venv/bin/activate
+source .venv/bin/activate
 
 3. Instalar el paquete y sus dependencias:
    pip install -e .
