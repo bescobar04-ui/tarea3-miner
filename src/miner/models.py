@@ -1,28 +1,27 @@
-from typing import List, Optional
+from datetime import datetime
+from enum import Enum
+from typing import Optional
 from pydantic import BaseModel, Field
 
-class Finding(BaseModel):
-    rule_id: str
-    severity: Optional[str] = None
-    message: str
-    file: str
-    start_line: int
+# 1. Estado de la generación del SBOM
+class SbomStatus(str, Enum):
+    SUCCESS = "SUCCESS"
+    FAILED = "FAILED"
 
-class Repository(BaseModel):
+# 2. Metadatos del SBOM para el JSON general
+class SbomMetadata(BaseModel):
+    full_name: str
+    commit_hash: str
+    generated_at: datetime = Field(default_factory=datetime.utcnow)
+    syft_version: str
+    status: SbomStatus
+    component_count: int = 0
+    sbom_path: Optional[str] = None
+    error_message: Optional[str] = None
+
+# 3. Modelo del repositorio con SBOM integrado
+class RepositoryResult(BaseModel):
     name: str
-    url: str
-    status: str  # Ej: "analyzed", "failed", "unsupported", "clone_error"
-    languages: List[str] = Field(default_factory=list)
-    findings: List[Finding] = Field(default_factory=list)
-
-class Summary(BaseModel):
-    repositories: int = 0
-    analyzed: int = 0
-    failed: int = 0
-    unsupported: int = 0
-    findings: int = 0
-
-class OrganizationResult(BaseModel):
-    organization: str
-    summary: Summary
-    repositories: List[Repository] = Field(default_factory=list)
+    full_name: str
+    commit_hash: Optional[str] = None
+    sbom_info: Optional[SbomMetadata] = None
