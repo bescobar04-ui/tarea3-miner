@@ -1,48 +1,60 @@
-# Tarea 3: Miner de Vulnerabilidades para Organizaciones de GitHub
+# Miner de Vulnerabilidades y Generación de SBOMs para GitHub
 
-Herramienta de línea de comandos (CLI) en Python para automatizar el análisis estático de seguridad con CodeQL sobre los repositorios de una organización de GitHub.
+Herramienta de línea de comandos (CLI) desarrollada en Python para automatizar el análisis estático de seguridad con CodeQL y la generación de inventarios de software (SBOM) en formato CycloneDX JSON mediante Syft sobre repositorios de GitHub.
 
-El miner consulta la REST API de GitHub (manejando paginación y límites de tasa), clona los repositorios localmente, crea bases de datos CodeQL, ejecuta reglas de seguridad, procesa los archivos SARIF y consolida los resultados en un reporte JSON estructurado mediante Pydantic.
+---
 
 ## Requisitos Previos
 
-* Python 3.9 o superior.
-* Git y CodeQL CLI instalados y configurados en las variables de entorno (`PATH`).
-* GitHub Personal Access Token con permisos de lectura.
+- Python 3.9 o superior.
+- Git y CodeQL CLI instalados y configurados en las variables de entorno (PATH).
+- Syft CLI instalado y verificado (`syft --version`).
+- GitHub Personal Access Token con permisos de lectura.
+
+---
 
 ## Instalación y Configuración
 
-1. **Clonar el repositorio e ingresar a la carpeta:**
-   `git clone https://github.com/bescobar04-ui/tarea3-miner.git`
-   `cd tarea3-miner`
+1. Clonar el repositorio e ingresar al directorio:
+   ```bash
+   git clone [https://github.com/bescobar04-ui/tarea3-miner.git](https://github.com/bescobar04-ui/tarea3-miner.git)
+   cd tarea3-miner
 
-2. **Crear y activar el entorno virtual:**
-   `python -m venv .venv`
-   `.\.venv\Scripts\activate`
+## 1. Crear y activar el entorno virtual:
+Windows (PowerShell):python -m venv .venv
+.\.venv\Scripts\activate
+Linux / macOS:python -m venv .venv
+source .venv/bin/activate
+## 2. Instalar el paquete y sus dependencias en modo editable:pip install -e 
+pip install -e .
+## 3. Configurar el token de GitHub:
+Copia el archivo .env.example creando un archivo .env y asigna tu token: GITHUB_TOKEN=tu_token_de_github_aqui
 
-3. **Instalar el paquete y sus dependencias:**
-   `pip install -e .`
+## Uso de la CLI
+1. Escaneo de Vulnerabilidades con CodeQL (Tarea 3)
+Consulta la API de GitHub, clona repositorios, ejecuta CodeQL, procesa archivos SARIF y genera el reporte consolidado:
+python -m miner scan --organization pallets-eco --output result.json
 
-4. **Configurar el token de GitHub:**
-   Copia `.env.example` a `.env` y asigna tu credencial:
-   `GITHUB_TOKEN=tu_token_de_github`
+2. Generación de SBOMs con Syft (Tarea 4)
+Genera inventarios SBOM en formato CycloneDX JSON a partir de repositorios localmente clonados sin repetir CodeQL:
+python -m miner sbom --repos-dir ./tmp_miner --output-dir ./results
 
-## Uso
+## Estructura de Salida y Resultados (Tarea 4)
+Al ejecutar la generación de SBOMs (miner sbom), la carpeta ./results contendrá:
+results/sboms/: Archivos .json individuales en formato CycloneDX por cada repositorio.
+results/results_summary.json: Reporte general estructurado mediante Pydantic que incluye:
+full_name: Nombre del repositorio.
+commit_hash: Commit exacto analizado.
+generated_at: Fecha y hora UTC.
+syft_version: Versión de Syft utilizada.
+status: Estado de la ejecución (SUCCESS o FAILED).
+component_count: Cantidad de componentes identificados.
+sbom_path: Ruta del SBOM generado.
 
-Para ejecutar el escaneo de una organización:
-`python -m miner scan --organization pallets-eco --output result.json`
+Observaciones de Verificación
+Diferenciación de Estados: El sistema distingue entre ejecuciones fallidas (FAILED) y ejecuciones exitosas sin componentes (SUCCESS con 0 componentes).
 
-## Pruebas
+Inventario de Dependencias: Syft identifica paquetes mediante archivos manifiesto o de bloqueo (requirements.txt, package.json, Pipfile.lock, etc.). Si un repositorio carece de estos archivos, registrará 0 componentes.
 
-Para correr las pruebas unitarias:
-`pytest`
-
-## Estructura del Proyecto
-
-* `src/miner/cli.py`: Interfaz de línea de comandos con Typer.
-* `src/miner/github_api.py`: Cliente de la API de GitHub con autenticación y paginación.
-* `src/miner/git_utils.py`: Gestión de clonación remota de repositorios.
-* `src/miner/codeql.py`: Ejecución automatizada de comandos de CodeQL CLI.
-* `src/miner/sarif_parser.py`: Extracción y mapeo de hallazgos desde archivos SARIF.
-* `src/miner/models.py`: Modelos y esquemas de datos validados con Pydantic.
-* `tests/`: Pruebas unitarias ejecutadas con `pytest`.
+## Pruebas Unitarias
+Para ejecutar la suite de pruebas automáticas: pytest
